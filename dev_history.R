@@ -21,6 +21,7 @@ usethis::use_readme_rmd()
 
 # Use Roxygen to generate documentation
 usethis::use_roxygen_md()
+
 # Create the documentation
 devtools::document()
 
@@ -36,14 +37,24 @@ usethis::use_latest_dependencies()
 usethis::use_testthat()
 usethis::use_test("format_dt")
 
+# ignore files for build
+usethis::use_build_ignore("dev_history.R")
+
 # Check the package is ready to be published
 devtools::check()
-
 
 # Git and Github
 usethis::use_git()
 usethis::use_github()
 usethis::use_pkgdown_github_pages()
+usethis::use_github_actions()
+usethis::use_github_action("render-rmarkdown")  #render readme, and other Rmd files
+usethis::use_github_action("pkgdown")
+
+
+
+###############################################################################
+###############################################################################
 
 use_readme_rmd()
 use_news_md()
