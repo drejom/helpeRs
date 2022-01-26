@@ -48,7 +48,8 @@ usethis::use_git()
 usethis::use_github()
 usethis::use_pkgdown_github_pages()
 usethis::use_github_actions()
-usethis::use_github_action("render-rmarkdown")  #render readme, and other Rmd files
+usethis::use_github_action("render-rmarkdown") # render readme, and other Rmd files
+
 usethis::use_github_action("pkgdown")
 
 
