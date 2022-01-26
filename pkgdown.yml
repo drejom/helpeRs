@@ -1,0 +1,10 @@
+pandoc: 2.7.3
+pkgdown: 2.0.2
+pkgdown_sha: ~
+articles:
+  helpeRs: helpeRs.html
+last_built: 2022-01-26T03:24Z
+urls:
+  reference: https://drejom.github.io/helpeRs/reference
+  article: https://drejom.github.io/helpeRs/articles
+
