@@ -5,6 +5,8 @@ library(devtools)
 # https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/
 # https://r-pkgs.org/whole-game.html
 # https://gist.github.com/sinarueeger/4516b833f4c588a851b50ebcad6ff1d3
+# https://orchid00.github.io/actions_sandbox/
+
 
 usethis::create_package("helpeRs")
 
