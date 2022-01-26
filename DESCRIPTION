@@ -14,13 +14,9 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
-    DESeq2 (>= 1.32.0),
     magrittr (>= 2.0.1),
     dplyr (>= 1.0.7),
     ggplot2 (>= 3.3.5),
-    limma (>= 3.48.3),
-    matrixStats (>= 0.61.0),
-    RUVSeq (>= 1.26.0),
     tibble (>= 3.1.6),
     tidyr (>= 1.1.4),
     DT (>= 0.20)
