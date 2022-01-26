@@ -1,0 +1,19 @@
+---
+title: "helpeRs"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{helpeRs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(helpeRs)
+```

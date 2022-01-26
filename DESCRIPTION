@@ -1,0 +1,32 @@
+Package: helpeRs
+Title: Personal Package for Denis O'Meally
+Version: 0.0.0.9000
+Authors@R: 
+    person("Denis", "O'Meally", , "domeally@coh.org", role = c("aut", "cre"), 
+    comment = c(ORCID = "0000-0001-7749-9506"))
+Description: Standalone package containing various R functions for use across multiple projects; mostly for personal use.
+    This package is not intended for use in production. 
+    Based on the consise howto by Karl Broman https://kbroman.org/AdvData/18_rpack_demo.html.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-AU
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    DESeq2 (>= 1.32.0),
+    magrittr (>= 2.0.1),
+    dplyr (>= 1.0.7),
+    ggplot2 (>= 3.3.5),
+    limma (>= 3.48.3),
+    matrixStats (>= 0.61.0),
+    RUVSeq (>= 1.26.0),
+    tibble (>= 3.1.6),
+    tidyr (>= 1.1.4),
+    DT (>= 0.20)
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.1.2)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
