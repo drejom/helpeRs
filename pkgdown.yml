@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   helpeRs: helpeRs.html
-last_built: 2022-01-26T05:14Z
+last_built: 2022-01-26T18:11Z
 urls:
   reference: https://drejom.github.io/helpeRs/reference
   article: https://drejom.github.io/helpeRs/articles
