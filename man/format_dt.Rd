@@ -17,8 +17,7 @@ Turns a data frame or matrix into a DT formatted table
 with export buttons for copy, csv or excel.
 }
 \examples{
-x = matrix(rnorm(9), nrow = 3)
-format_dt(x)
+format_dt(USArrests)
 }
 \author{
 Denis O'Meally

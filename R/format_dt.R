@@ -9,8 +9,7 @@
 #' @export
 #' @importFrom DT datatable
 #' @examples
-#' x = matrix(rnorm(9), nrow = 3)
-#' format_dt(x)
+#' format_dt(USArrests)
 
 format_dt <- function(x) {
     DT::datatable(x,

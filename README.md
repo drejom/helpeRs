@@ -10,6 +10,14 @@
 
 The goal of helpeRs is to …
 
+## Things to include
+
+<https://www.r-bloggers.com/2016/07/introducing-badgecreatr-a-package-that-places-badges-in-your-readme/>
+
+<https://www.r-bloggers.com/2017/06/how-to-add-code-coverage-codecov-to-your-r-package/>
+
+<https://cynkra.github.io/fledge/>
+
 ## Installation
 
 You can install the development version of helpeRs from
