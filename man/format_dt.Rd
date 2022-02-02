@@ -18,6 +18,7 @@ with export buttons for copy, csv or excel.
 }
 \examples{
 format_dt(USArrests)
+
 }
 \author{
 Denis O'Meally

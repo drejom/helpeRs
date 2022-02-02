@@ -10,6 +10,7 @@
 #' @importFrom DT datatable
 #' @examples
 #' format_dt(USArrests)
+#'
 
 format_dt <- function(x) {
     DT::datatable(x,

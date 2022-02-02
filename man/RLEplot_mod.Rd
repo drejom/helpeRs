@@ -4,22 +4,40 @@
 \alias{RLEplot_mod}
 \title{RLEplot_mod}
 \usage{
-RLEplot_mod(data_matrix, sample_sheet, title = NULL, caption = NULL)
+RLEplot_mod(
+  data_matrix,
+  sample_sheet,
+  col_by = group,
+  title = NULL,
+  caption = NULL
+)
 }
 \arguments{
-\item{data_matrix}{log2 transformed counts, as a data.frame or matrix}
+\item{data_matrix}{log2 transformed counts, as a \code{data.frame} or \code{matrix}}
 
-\item{sample_sheet}{a sample_sheet of class data.frame, with a column named batch}
+\item{sample_sheet}{a sample_sheet object that describes the sample metadata}
 
-\item{title}{a title for the plot. Leave blank for noe, or a character string}
+\item{col_by}{a column name from \code{sample_sheet} to colour the plot by}
 
-\item{caption}{caption for the plot. Leave blank for noe, or a character string}
+\item{title}{a title for the plot. Leave blank for none, or a character string}
+
+\item{caption}{caption for the plot. Leave blank for none, or a character string}
 }
 \value{
 a ggplot object
 }
 \description{
-plot the RLEs for each sample
+plot the relative log expresion for each sample. This plot is
+useful for comparing normalization procedures between groups.
+}
+\examples{
+
+m <- -log2(replicate(10,rgamma(3e4, 0.1)))
+colnames(m) <- letters[1:10]
+sample_sheet <- data.frame(sample_id = letters[1:10], group = c(rep("A",4),rep("B",6)))
+
+RLEplot_mod(m, sample_sheet, col_by = "group", title = "Relative log expression",
+caption = "Simulated data set of 10 samples in 5 groups drawn from 30000 genes")
 }
 \author{
 Denis O'Meally

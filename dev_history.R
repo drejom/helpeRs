@@ -80,7 +80,10 @@ me <- "Denis O'Meally"
 # run once at start of package
 usethis::create_package(paste0(pckgdir, pckg))
 usethis::use_mit_license(copyright_holder = me)
+
 usethis::use_readme_rmd()
+usethis::use_github_action("render-rmarkdown")
+
 usethis::use_testthat()
 usethis::use_roxygen_md()
 usethis::use_pipe() # everyone needs pipes
@@ -102,8 +105,10 @@ pkgdown::build_site()
 
 # building the package
 devtools::check() # can take a long time
-devtools::build()
-devtools::install(paste0("../", pckg))
+#devtools::build()
+#devtools::install(paste0("../", pckg))
+pkgdown::build_site()
+
 
 # use these for specific tasks
 # if check() or build_site() take too long

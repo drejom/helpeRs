@@ -19,7 +19,9 @@ Imports:
     dplyr,
     tibble,
     tidyr,
-    ggplot2
+    ggplot2,
+    matrixStats,
+    rlang
 Suggests: 
     rmarkdown,
     knitr,
