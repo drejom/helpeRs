@@ -15,7 +15,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     magrittr (>= 2.0.1),
-    DT (>= 0.20)
+    DT (>= 0.20),
+    dplyr,
+    tibble,
+    tidyr,
+    ggplot2
 Suggests: 
     rmarkdown,
     knitr,

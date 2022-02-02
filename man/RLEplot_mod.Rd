@@ -10,6 +10,10 @@ RLEplot_mod(data_matrix, sample_sheet, title = NULL, caption = NULL)
 \item{data_matrix}{log2 transformed counts, as a data.frame or matrix}
 
 \item{sample_sheet}{a sample_sheet of class data.frame, with a column named batch}
+
+\item{title}{a title for the plot. Leave blank for noe, or a character string}
+
+\item{caption}{caption for the plot. Leave blank for noe, or a character string}
 }
 \value{
 a ggplot object

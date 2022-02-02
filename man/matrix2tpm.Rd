@@ -7,9 +7,9 @@
 matrix2tpm(counts, len)
 }
 \arguments{
-\item{len}{a vector of feature lengths, in Kbp}
+\item{counts}{raw counts, as a data.frame or matrix}
 
-\item{data_matrix}{raw counts, as a data.frame or matrix}
+\item{len}{a vector of feature lengths, in Kbp}
 }
 \value{
 a matrix of TPMs
