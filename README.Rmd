@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/drejom/helpeRs/workflows/R-CMD-check/badge.svg)](https://github.com/drejom/helpeRs/actions)
 <!-- badges: end -->
 
-The goal of helpeRs is to ...
+The goal of helpeRs is to ... 
 
 ## Things to include
 
