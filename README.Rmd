@@ -18,6 +18,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/drejom/helpeRs/workflows/R-CMD-check/badge.svg)](https://github.com/drejom/helpeRs/actions)
 [![Codecov test coverage](https://codecov.io/gh/drejom/helpeRs/branch/main/graph/badge.svg)](https://app.codecov.io/gh/drejom/helpeRs?branch=main)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-`r paste0(version$major, ".", version$minor)`-6666ff.svg)](https://cran.r-project.org/)
+[![Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 <!-- badges: end -->
 
 The goal of helpeRs is to ... 

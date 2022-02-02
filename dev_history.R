@@ -126,4 +126,7 @@ usethis::use_coverage(type = c("codecov"))
 usethis::use_github_action("test-coverage")
 
 # badgecreator
-badgecreatr::badgeplacer(githubaccount = "yourgithubname", githubrepo = "yourpackagename", branch = "master")
+badgecreatr::badgeplacer(githubaccount = "drejom", githubrepo = "heleRs", branch = "main")
+library(badgecreatr)
+badgecreatr::minimal_badges(status = "concept", license = "MIT")
+badgecreatr::dynamic_badges_minimal(license = "MIT")
