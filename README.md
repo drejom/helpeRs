@@ -8,25 +8,18 @@
 [![R-CMD-check](https://github.com/drejom/helpeRs/workflows/R-CMD-check/badge.svg)](https://github.com/drejom/helpeRs/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/drejom/helpeRs/branch/main/graph/badge.svg)](https://app.codecov.io/gh/drejom/helpeRs?branch=main)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+[![minimal R
+version](https://img.shields.io/badge/R%3E%3D-4.1.2-6666ff.svg)](https://cran.r-project.org/)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
 or
 proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2022--02--01-yellowgreen.svg)](/commits/main)
-[![minimal R
-version](https://img.shields.io/badge/R%3E%3D-41.2-6666ff.svg)](https://cran.r-project.org/)
-[![packageversion](https://img.shields.io/badge/Package%20version-x86_64-apple-darwin17.0,%20x86_64,%20darwin17.0,%20x86_64,%20darwin17.0,%20,%204,%201.2,%202021,%2011,%2001,%2081115,%20R,%20R%20version%204.1.2%20(2021-11-01),%20Bird%20Hippie-orange.svg?style=flat-square)](commits/main)
-
 <!-- badges: end -->
 
 The goal of helpeRs is to …
 
 ## Things to include
-
-<https://www.r-bloggers.com/2016/07/introducing-badgecreatr-a-package-that-places-badges-in-your-readme/>
-
-<https://www.r-bloggers.com/2017/06/how-to-add-code-coverage-codecov-to-your-r-package/>
 
 <https://cynkra.github.io/fledge/>
 
