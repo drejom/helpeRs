@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/drejom/helpeRs/workflows/R-CMD-check/badge.svg)](https://github.com/drejom/helpeRs/actions)
+[![Codecov test coverage](https://codecov.io/gh/drejom/helpeRs/branch/main/graph/badge.svg)](https://app.codecov.io/gh/drejom/helpeRs?branch=main)
 <!-- badges: end -->
 
 The goal of helpeRs is to ... 

@@ -118,3 +118,12 @@ devtools::run_examples() # checks all your function examples work
 pkgdown::build_home() # from README and DESCRIPTION
 pkgdown::build_article() # from vignettes
 pkgdown::build_reference() # from roxygen function documentation
+
+
+# codecov
+
+usethis::use_coverage(type = c("codecov"))
+usethis::use_github_action("test-coverage")
+
+# badgecreator
+badgecreatr::badgeplacer(githubaccount = "yourgithubname", githubrepo = "yourpackagename", branch = "master")
