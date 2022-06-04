@@ -68,3 +68,39 @@ matrix2tpm <- function(counts, len) {
     x <- counts / len
     return(t(t(x) * 1e6 / colSums(x)))
 }
+
+#' @title Write an expression matrix to file
+#' @name write_tpm_matrix
+#' @description Write an TPM expression matrix to a CSV file in `extdata`
+#' @param summarised_experiment a `SummarisedExperiment` object
+#' @param drop samples (columns) to remove
+#' @param tpm minimum TPM for a gene to be kept, Default: 1
+#' @param samples minimum number of samples a gene must be present in to be kept, Default: 5
+#' @return path to the CSV file
+#' @details This function writes an expression matrix to a CSV file in `extdata`,
+#' filtering out genes with fewer than `tpm` reads in at least `samples` samples.
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'     write_tpm_matrix(cml_mrna_GRCm38_HLT, c("F545.7", "X490.17"), tpm = 1, samples = 5)
+#' }
+#' }
+#' @seealso
+#'  \code{\link[SummarizedExperiment]{SummarizedExperiment-class}}
+#'  \code{\link[utils]{write.table}}
+#' @rdname write_tpm_matrix
+#' @export
+write_tpm_matrix <- function(summarised_experiment, drop = NULL, tpm = 1, samples = 5) {
+    out_name <- paste(tolower(summarised_experiment@metadata$project), summarised_experiment@metadata$reference_genome, sep = "_")
+    # Subset to samples to drop
+    summarised_experiment <- summarised_experiment[, !(summarised_experiment$names %in% drop)]
+    # Make a CSV of TPMs, keeping genes with > 1 TPM in 5 samples, and transgenes
+    mat <- SummarizedExperiment::assay(summarised_experiment, "abundance")
+    filter <- rowSums(mat >= tpm) >= samples
+    filter[grep("^HSA_", rownames(summarised_experiment))] <- TRUE
+    filtered <- summarised_experiment[filter, ]
+    tpm_matrix <- SummarizedExperiment::assay(filtered, "abundance")
+    file_name <- paste0("inst/extdata/", out_name, "_", tpm, "tpm_in_", samples, "samples.csv")
+    utils::write.csv(tpm_matrix, file_name)
+    return(file_name)
+}

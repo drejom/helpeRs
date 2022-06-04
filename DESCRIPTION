@@ -12,7 +12,7 @@ Encoding: UTF-8
 Language: en-AU
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Imports: 
     magrittr (>= 2.0.1),
     DT (>= 0.20),
@@ -26,7 +26,11 @@ Suggests:
     rmarkdown,
     knitr,
     testthat (>= 3.1.2),
-    covr
+    covr,
+    SummarizedExperiment,
+    utils,
+    purrr,
+    rcompanion
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://github.com/drejom/helpeRs,
