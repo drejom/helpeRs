@@ -32,20 +32,20 @@ useful for comparing normalization procedures between groups.
 }
 \examples{
 
-m <- -log2(replicate(10,rgamma(3e4, 0.1))) \%>\%
-   magrittr::set_colnames(letters[1:10])
+m <- -log2(replicate(10, rgamma(3e4, 0.1))) \%>\%
+    magrittr::set_colnames(letters[1:10])
 sample_sheet <- data.frame(
-   sample_id = letters[1:10],
-   group = c(rep("A",4), rep("B",6))
-   )
+    sample_id = letters[1:10],
+    group = c(rep("A", 4), rep("B", 6))
+)
 
 RLEplot_mod(
- m,
- sample_sheet,
- col_by = "group", 
- title = "Relative log expression",
- caption = "Simulated data set of 10 samples in 5 groups drawn from 30000 genes"
- )
+    m,
+    sample_sheet,
+    col_by = "group",
+    title = "Relative log expression",
+    caption = "Simulated data set of 10 samples in 5 groups drawn from 30000 genes"
+)
 }
 \author{
 Denis O'Meally
