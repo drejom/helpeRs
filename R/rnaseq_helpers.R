@@ -13,21 +13,20 @@
 #' @importFrom matrixStats rowMedians
 #' @examples
 #'
-#' m <- -log2(replicate(10,rgamma(3e4, 0.1))) %>%
-#'    magrittr::set_colnames(letters[1:10])
+#' m <- -log2(replicate(10, rgamma(3e4, 0.1))) %>%
+#'     magrittr::set_colnames(letters[1:10])
 #' sample_sheet <- data.frame(
-#'    sample_id = letters[1:10],
-#'    group = c(rep("A",4), rep("B",6))
-#'    )
+#'     sample_id = letters[1:10],
+#'     group = c(rep("A", 4), rep("B", 6))
+#' )
 #'
 #' RLEplot_mod(
-#'  m,
-#'  sample_sheet,
-#'  col_by = "group", 
-#'  title = "Relative log expression",
-#'  caption = "Simulated data set of 10 samples in 5 groups drawn from 30000 genes"
-#'  )
-
+#'     m,
+#'     sample_sheet,
+#'     col_by = "group",
+#'     title = "Relative log expression",
+#'     caption = "Simulated data set of 10 samples in 5 groups drawn from 30000 genes"
+#' )
 RLEplot_mod <- function(data_matrix, sample_sheet, col_by = group, title = NULL, caption = NULL) {
 
     # check that the sample_sheet has the same length as the data_matrix
@@ -73,6 +72,7 @@ matrix2tpm <- function(counts, len) {
 #' @name write_tpm_matrix
 #' @description Write an TPM expression matrix to a CSV file in `extdata`
 #' @param summarised_experiment a `SummarisedExperiment` object
+#' @param path the existing folder to write to, Default is `inst/extdata/`
 #' @param drop samples (columns) to remove
 #' @param tpm minimum TPM for a gene to be kept, Default: 1
 #' @param samples minimum number of samples a gene must be present in to be kept, Default: 5
@@ -90,8 +90,8 @@ matrix2tpm <- function(counts, len) {
 #'  \code{\link[utils]{write.table}}
 #' @rdname write_tpm_matrix
 #' @export
-write_tpm_matrix <- function(summarised_experiment, drop = NULL, tpm = 1, samples = 5) {
-    out_name <- paste(tolower(summarised_experiment@metadata$project), summarised_experiment@metadata$reference_genome, sep = "_")
+write_tpm_matrix <- function(summarised_experiment, path = "inst/extdata/", drop = NULL, tpm = 1, samples = 5) {
+    out_name <- summarised_experiment@metadata$object_name
     # Subset to samples to drop
     summarised_experiment <- summarised_experiment[, !(summarised_experiment$names %in% drop)]
     # Make a CSV of TPMs, keeping genes with > 1 TPM in 5 samples, and transgenes
@@ -100,7 +100,7 @@ write_tpm_matrix <- function(summarised_experiment, drop = NULL, tpm = 1, sample
     filter[grep("^HSA_", rownames(summarised_experiment))] <- TRUE
     filtered <- summarised_experiment[filter, ]
     tpm_matrix <- SummarizedExperiment::assay(filtered, "abundance")
-    file_name <- paste0("inst/extdata/", out_name, "_", tpm, "tpm_in_", samples, "samples.csv")
+    file_name <- paste0(path, out_name, "_", tpm, "tpm_in_", samples, "samples.csv")
     utils::write.csv(tpm_matrix, file_name)
     return(file_name)
 }
