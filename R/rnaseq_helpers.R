@@ -91,16 +91,16 @@ matrix2tpm <- function(counts, len) {
 #' @rdname write_tpm_matrix
 #' @export
 write_tpm_matrix <- function(summarised_experiment, path = "inst/extdata/", drop = NULL, tpm = 1, samples = 5) {
-    out_name <- summarised_experiment@metadata$object_name
+    object_name <- summarised_experiment@metadata$object_name
     # Subset to samples to drop
-    summarised_experiment <- summarised_experiment[, !(summarised_experiment$names %in% drop)]
+    summarised_experiment <- summarised_experiment[, !(colnames(summarised_experiment) %in% drop)]
     # Make a CSV of TPMs, keeping genes with > 1 TPM in 5 samples, and transgenes
     mat <- SummarizedExperiment::assay(summarised_experiment, "abundance")
     filter <- rowSums(mat >= tpm) >= samples
     filter[grep("^HSA_", rownames(summarised_experiment))] <- TRUE
     filtered <- summarised_experiment[filter, ]
     tpm_matrix <- SummarizedExperiment::assay(filtered, "abundance")
-    file_name <- paste0(path, out_name, "_", tpm, "tpm_in_", samples, "samples.csv")
+    file_name <- paste0(path, object_name, "_", tpm, "tpm_in_", samples, "samples.csv")
     utils::write.csv(tpm_matrix, file_name)
     return(file_name)
 }
