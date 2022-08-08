@@ -51,10 +51,12 @@ RLEplot_mod <- function(data_matrix, sample_sheet, col_by = group, title = NULL,
 }
 
 #' @title matrix2tpm
-#' @description calculate TPMs from a matrix and a vector of feature lengths
+#' @description calculate TPMs from a matrix of genes (rows) by samples
+#' (columns) and a vector of feature lengths.
 #' @param counts raw counts, as a data.frame or matrix
 #' @param len a vector of feature lengths, in Kbp
-#' @return a matrix of TPMs
+#' @source https://support.bioconductor.org/p/91218/
+#' @return Returns a matrix of TPMs, genes in rows, samples in columns
 #' @author Mike Love
 #' @export
 
