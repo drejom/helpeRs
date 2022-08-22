@@ -1,3 +1,5 @@
+helpeRs
+================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -10,7 +12,7 @@
 coverage](https://codecov.io/gh/drejom/helpeRs/branch/main/graph/badge.svg)](https://app.codecov.io/gh/drejom/helpeRs?branch=main)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![minimal R
-version](https://img.shields.io/badge/R%3E%3D-4.1.2-6666ff.svg)](https://cran.r-project.org/)
+version](https://img.shields.io/badge/R%3E%3D-4.2.0-6666ff.svg)](https://cran.r-project.org/)
 [![Project Status: Concept – Minimal or no implementation has been done
 yet, or the repository is only intended to be a limited example, demo,
 or

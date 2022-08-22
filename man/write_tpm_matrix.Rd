@@ -4,10 +4,18 @@
 \alias{write_tpm_matrix}
 \title{Write an expression matrix to file}
 \usage{
-write_tpm_matrix(summarised_experiment, drop = NULL, tpm = 1, samples = 5)
+write_tpm_matrix(
+  summarised_experiment,
+  path = "inst/extdata/",
+  drop = NULL,
+  tpm = 1,
+  samples = 5
+)
 }
 \arguments{
 \item{summarised_experiment}{a \code{SummarisedExperiment} object}
+
+\item{path}{the existing folder to write to, Default is \verb{inst/extdata/}}
 
 \item{drop}{samples (columns) to remove}
 
