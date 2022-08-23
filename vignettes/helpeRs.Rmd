@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# test {.tabset}
+# test {.tabset .tabset-fade}
 ```{r setup}
 library(helpeRs)
 ```
@@ -26,3 +26,16 @@ some text
 ## Tab 2
 
 # another heading
+
+```{r, include = FALSE}
+quakes |>
+    e_charts(long) |>
+    e_geo(
+        roam = TRUE,
+        boundingCoords = list(
+            c(185, -10),
+            c(165, -40)
+        )
+    ) |>
+    e_scatter_gl(lat, depth) |>
+    e_visual_map()
